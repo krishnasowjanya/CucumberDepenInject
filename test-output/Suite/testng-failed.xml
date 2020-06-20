@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="none" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.testautomation.Listeners.ITestListenerImpl"/>
+  </listeners>
+  <test name="Test">
+    <classes>
+      <class name="runners.testrunnersample2"/>
+    </classes>
+  </test> <!-- Test -->
+  <test parallel="none" name="Test(failed)">
+    <classes>
+      <class name="runners.testrunnersample2">
+        <methods>
+          <include name="setUpClass"/>
+          <include name="feature" invocation-numbers="0 1"/>
+          <include name="tearDownClass"/>
+        </methods>
+      </class> <!-- runners.testrunnersample2 -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
